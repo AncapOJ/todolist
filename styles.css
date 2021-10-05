@@ -29,6 +29,30 @@ body, html {
   min-height: 80vh;
 }
 
+.div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40px;
+}
+
+.edit_button {
+  background-color: #e8f388;
+  cursor: pointer;
+}
+
+.delete_button {
+  background-color: #f38282;
+  cursor: pointer;
+}
+
+.form-control {
+  cursor: pointer;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -26,16 +26,31 @@ body, html {
 
 }
 
-// .list {
-//     min-height: 80px;
-//     display: flex;
-//     justify-content: center;
-//     margin-top: 20px;
-// }
+.div {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.edit_button {
+    background-color: rgb(232, 243, 136);
+    cursor: pointer;
+}
+
+.delete_button {
+    background-color: rgb(243, 130, 130);
+    cursor:pointer;
+}
+
+.form-control {
+    cursor: pointer;
+}
+
+
+
 .footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    // color:darkslategray;
     color:whitesmoke;
 }
