@@ -25,6 +25,12 @@ body, html {
   font-size: 40px;
 }
 
+@media (max-width: 576px) {
+  .header h1 {
+    font-size: 30px;
+  }
+}
+
 .main {
   min-height: 80vh;
 }
@@ -39,6 +45,16 @@ body, html {
   padding-top: 40px;
 }
 
+@media (max-width: 576px) {
+  .div {
+    padding-top: 20px;
+  }
+}
+
+.list__item {
+  margin-bottom: 20px;
+}
+
 .edit_button {
   background-color: #e8f388;
   cursor: pointer;
@@ -47,6 +63,12 @@ body, html {
 .delete_button {
   background-color: #f38282;
   cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .add__text {
+    padding-left: 20px;
+  }
 }
 
 .form-control {
