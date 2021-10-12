@@ -5,50 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <script src="index.js" defer></script>
+    <title>To Do List</title>
 </head>
 <body>
     <header class="header">
-
         <h1>To Do List</h1>
-
     </header>
+
     <main class="main">
-        <div class="div">
-            <ul class="list">
-                <li class="list__item">
-                    <span>Study bridge</span>
-                    <button class="edit_button">Edit</button>
-                    <button class="delete_button">Done</button>
-                    
-                </li>
-                <li class="list__item">
-                    <span>Go shopping</span>
-                    <button class="edit_button">Edit</button>
-                    <button class="delete_button">Done</button>
-                    
-                    
-                </li>
-                <li class="list__item">
-                    <span>Clean the garden</span>
-                    <button class="edit_button">Edit</button>
-                    <button class="delete_button">Done</button>
-                    
-                </li>
-            </ul>
-
-        </div>
-        <div class="div"> 
-            <form class="add__text">
-                <label for="" class="text-light">Add a new "to do":</label>
-                <input type="text" class="form-control" name="add">
-            </form>
-
-        </div>
         
+        <div class="div">
+            <ul class="list"></ul>
+        </div>
+
+        <div class="div add__text"> 
+            <label for="" class="add__text-label">Add a new "to do":</label>
+            <input type="text" class="add__text-input" name="add">
+            <button class="add__text-button">Add</button>
+        </div>
         
     </main>
-
 
     <footer class="footer">
         <h3>Creado por Esther Peñalba</h3>

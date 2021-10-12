@@ -1,14 +1,18 @@
 body, html {
-    background-image: url(/images/background.png);
+    background-image: url(/images/pineapples-1606852_1920.jpg);
+    background-attachment: contain;
+    background-size: cover;
+    background-position-y:top;
     background-repeat: no-repeat;
-    background-position-x: center;
     background-position-y: 20%;
     margin: 0px;
     height: 100vh;
+    
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .header {
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,40 +28,71 @@ body, html {
 }
 
 .main {
-    min-height: 80vh;
+    min-height: 60vh;
+    
 
 }
 
 .div {
+    
     display: flex;
     justify-content: center;
-    padding-top: 40px;
+    margin-top: 20vh;
     @media (max-width: 576px) {
         padding-top: 20px;
     }
 }
 
+
 .list__item {
     margin-bottom: 20px;
+    margin-left: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+ 
+}
+
+.done {
+    text-decoration: line-through;
 }
 
 .edit_button {
-    background-color: rgb(232, 243, 136);
+    background-color: rgb(245, 244, 171);
+    border-radius: 10px;
+    border:none;
+    padding: 5px;
     cursor: pointer;
+    margin-left: 20px;
 }
 
-.delete_button {
-    background-color: rgb(243, 130, 130);
+.done_button {
     cursor:pointer;
+}
+.del {
+    text-decoration: none;
+    color: black;
+    cursor:pointer;
+    margin-left: 20px;
 }
 
 .add__text {
+    
     @media (max-width: 576px) {
         padding-left: 20px;
     }
 }
-.form-control {
+
+.add__text-input {
+    margin-left: 20px;
+}
+.add__text-button {
     cursor: pointer;
+    margin-left: 20px;
+    background-color: rgb(245, 244, 171);
+    border-radius: 10px;
+    border:none;
+    padding: 8px;
 }
 
 
@@ -67,5 +102,5 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    color:whitesmoke;
+    color:darkslategray;
 }

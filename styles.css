@@ -1,7 +1,9 @@
 body, html {
-  background-image: url(/images/background.png);
+  background-image: url(/images/pineapples-1606852_1920.jpg);
+  background-attachment: contain;
+  background-size: cover;
+  background-position-y: top;
   background-repeat: no-repeat;
-  background-position-x: center;
   background-position-y: 20%;
   margin: 0px;
   height: 100vh;
@@ -32,7 +34,7 @@ body, html {
 }
 
 .main {
-  min-height: 80vh;
+  min-height: 60vh;
 }
 
 .div {
@@ -42,7 +44,7 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 40px;
+  margin-top: 20vh;
 }
 
 @media (max-width: 576px) {
@@ -53,16 +55,38 @@ body, html {
 
 .list__item {
   margin-bottom: 20px;
+  margin-left: 20px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.done {
+  text-decoration: line-through;
 }
 
 .edit_button {
-  background-color: #e8f388;
+  background-color: #f5f4ab;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.done_button {
   cursor: pointer;
 }
 
-.delete_button {
-  background-color: #f38282;
+.del {
+  text-decoration: none;
+  color: black;
   cursor: pointer;
+  margin-left: 20px;
 }
 
 @media (max-width: 576px) {
@@ -71,8 +95,17 @@ body, html {
   }
 }
 
-.form-control {
+.add__text-input {
+  margin-left: 20px;
+}
+
+.add__text-button {
   cursor: pointer;
+  margin-left: 20px;
+  background-color: #f5f4ab;
+  border-radius: 10px;
+  border: none;
+  padding: 8px;
 }
 
 .footer {
@@ -85,6 +118,6 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: whitesmoke;
+  color: darkslategray;
 }
 /*# sourceMappingURL=styles.css.map */
