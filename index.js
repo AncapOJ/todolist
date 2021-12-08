@@ -24,7 +24,7 @@ const newTodo = document.querySelector('.add__text-input');
 function addNewItem () {
     
     let newtext= newTodo.value;
-    if (!newtext) return; //newtext empty
+    if (!newtext) return; 
     todo.push({
         item: newtext,
         done: false,
@@ -40,6 +40,22 @@ const listContainer = document.querySelector('.list');
 function cleanTodo() {
     listContainer.innerHTML='';
     for (const[i,item] of todo.entries()){
+
+         //Done button
+         let donebutt = document.createElement('input');
+         donebutt.type="checkbox";
+         donebutt.className='done_button';
+ 
+         //Done event
+         donebutt.onchange = function (){
+             if(this.checked){
+                 todo[i].done=true;
+             }else {
+                 todo[i].done=false;
+             }
+             setLocalStorage(todo);
+             cleanTodo();
+         }
 
         //Delete button
         let delbutt = document.createElement('a');
@@ -69,21 +85,7 @@ function cleanTodo() {
             cleanTodo();
         }
 
-        //Done button
-        let donebutt = document.createElement('input');
-        donebutt.type="checkbox";
-        donebutt.className='done_button';
-
-        //Done event
-        donebutt.onchange = function (){
-            if(this.checked){
-                todo[i].done=true;
-            }else {
-                todo[i].done=false;
-            }
-            setLocalStorage(todo);
-            cleanTodo();
-        }
+       
 
         //DOM
         let text = document.createElement("span");
@@ -107,71 +109,4 @@ function cleanTodo() {
 
 todo= getLocalStorage();
 cleanTodo();
-
-//Event add new item
-// const newTodo =document.querySelector('.add__text-button');
-
-// newTodo.addEventListener('click', addNewItem);
-
-// function addNewItem() {
-//     let newItem = document.createElement('li');
-//     let list = document.querySelector('.list');
-//     let input = document.querySelector('.add__text-input');
-//     newItem.textContent=input.value;
-//     input.value='';
-//     newItem.className='list__item';
-//     list.appendChild(newItem);
-
-//     addNewEditButton(newItem);
-//     addNewDoneButton(newItem);
-//     addNewDeleteButton(newItem);
-// }
-
-// function addNewEditButton(newItem) {
-//     let butt = document.createElement('button');
-//     butt.textContent='Edit';
-//     butt.className='edit_button';
-//     newItem.appendChild(butt);
-// }
-
-// function addNewDoneButton (newItem) {
-//     let butt = document.createElement('button');
-//     butt.textContent='Done';
-//     butt.className='done_button';
-//     newItem.appendChild(butt);
-// }
-
-// function addNewDeleteButton (newItem) {
-//     let butt = document.createElement('button');
-//     butt.textContent='Delete';
-//     butt.className='del';
-//     newItem.appendChild(butt);
-// }
-
-
-// //Event delete item
-// let listLi = document.querySelectorAll('.del');
-
-// for (item of listLi){
-//         item.addEventListener('click',(event)=>{
-//         event.path[0].parentNode.remove();
-//     });
-// }
-
-
-// //Event item done
-// const done = document.querySelectorAll('.done_button')
-
-// for (item of done) {
-//     item.addEventListener('click',(event)=>{
-//         let i = event.path[0].parentNode;
-//         if (i.classList[1]){
-//             i.classList.remove('done')
-//         }else{
-//             i.classList.add('done');
-//         }
-        
-//         console.log(i);
-//     })
-// }
 
